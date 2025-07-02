@@ -4,6 +4,7 @@
     <thead>
         <tr>
           <th scope="col">#</th>
+          <th scope="col">Image</th>
           <th scope="col">Title</th>
           <th scope="col">Author</th>
           <th scope="col">Date Add</th>
@@ -14,10 +15,11 @@
       <tbody>
         <tr *ngFor="let tempBook of books; let i=index">
           <th scope="row">{{ i + 1}}</th>
+          <td><img src="{{ tempBook.image }}" height="50"></td>
           <td>{{ tempBook.name }}</td>
           <td>{{ tempBook.authorName }}</td>
-          <td>{{ tempBook.date_add }}</td>
-          <td>{{ tempBook.date_finish }}</td>
+          <td>{{ tempBook.dateAdd | date }}</td>
+          <td>{{ tempBook.dateFinish | date  }}</td>
           <td>{{ tempBook.statusType }}</td>
         </tr>
       </tbody>

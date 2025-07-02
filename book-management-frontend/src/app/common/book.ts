@@ -2,8 +2,8 @@ export class Book {
     constructor(
         public name: string,
         public image: string,
-        public date_add: Date,
-        public date_finish: Date,
+        public dateAdd: Date,
+        public dateFinish: Date,
         public authorName: string,
         public statusType: string
     ){}
